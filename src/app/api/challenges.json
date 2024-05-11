@@ -1,0 +1,804 @@
+{
+  "challenges": [
+    {
+      "id": 2,
+      "title": "Manipulação de Listas",
+      "description": "Uma empresa precisa de um programa para calcular a média de desempenho dos seus funcionários com base em suas notas em diferentes áreas. O código fornecido abaixo faz a leitura das notas e tenta calcular a média, mas há um erro. Analise o código e marque a opção que identifica o erro.",
+      "code": "def cadastrar_aluno():\n    nome = input(\"Nome do aluno: \")\n    disciplina = input(\"Disciplina do aluno: \")\n    nota = float(input(\"Nota do aluno: \"))\n    return {'nome': nome, 'disciplina': disciplina, 'nota': nota}\n\nnum_alunos = int(input(\"Informe o número de alunos a cadastrar: \"))\n\nalunos = []\n\nfor _ in range(num_alunos):\n    aluno = cadastrar_aluno()\n  alunos.append(aluno)\n\nprint(\"\\nAlunos cadastrados:\")\nfor i, aluno in enumerate(alunos, start=1):\n    print(f\"\\nAluno {i}:\")\n    print(f\"Nome: {aluno['nome']}\")\n    print(f\"Disciplina: {aluno['disciplina']}\")\n    print(f\"Nota: {aluno['nota']}\")",
+      "alternatives": [
+        "Erro na linha alunos.append(aluno)",
+        "Erro na linha num_alunos = int(input(\"Informe o número de alunos a cadastrar: \"))",
+        "Erro na linha print(\"\nAlunos cadastrados:\").",
+        "Não há erro no código."
+      ],
+      "answer_alternative": 1,
+      "answer_description": "A linha referida, linha 13, não está respeitando a indentação do for. Dessa forma, individualmente, cada aluno não está sendo inserido na lista.",
+      "difficulty": "Difícil",
+      "type":"Sintático"
+    },
+    {
+      "id": 3,
+      "title": "Verificação de Igualdade",
+      "description": "Um programador está tentando criar um programa simples para verificar se o número digitado pelo usuário é igual a 10. No entanto, há um erro no código. Analise o trecho e marque a opção que identifica corretamente o erro.",
+      "code": "numero = int(input(\"Digite um número: \"));\nif numero = 10:\n    print(\"O número é igual a 10.\");\nelse:\n    print(\"O número é diferente de 10.\");",
+      "alternatives": [
+        "Erro na linha if numero = 10:",
+        "Erro na linha else:",
+        "Erro na linha numero = int(input(\"Digite um número: \"))",
+        "Não há erro no código."
+      ],
+      "answer_alternative": 1,
+      "answer_description": "Na linha 3, estamos fazendo a comparação entre a variável chamada número e o inteiro 10 de forma errada, com apenas um sinal de = onde deveria ser ==.",
+      "difficulty": "Fácil",
+      "type":"Sintático"
+    },
+    {
+      "id": 4,
+      "title": "Comparação de Strings",
+      "description": "Um desenvolvedor em seu site está criando um programa para verificar se a senha digitada pelo usuário é \"segura\". No entanto, há um erro na comparação da senha. Analise o trecho de código e marque a opção que identifica corretamente o erro.",
+      "code": "senha = input(\"Digite sua senha: \");\n\nif senha = \"segura\":\n    print(\"Senha segura. Acesso permitido.\");\nelse:\n    print(\"Senha não reconhecida. Acesso negado.\");",
+      "alternatives": [
+        "Erro na linha else:",
+        "Erro na linha if senha = \"segura\":",
+        " Erro na linha senha = input(\"Digite sua senha: \").",
+        "Não há erro no código"
+      ],
+      "answer_alternative": 2,
+      "answer_description": "Na linha 3, estamos fazendo a comparação entre a variável chamada senha e a string “segura” de forma errada, com apenas um sinal de = onde deveria ser ==.",
+      "difficulty": "Fácil",
+      "type":"Sintático"
+    },
+    {
+      "id": 5,
+      "title": "Entrada de Dados",
+      "description": "Alguns alunos estão desenvolvendo um código para calcular a média de notas digitadas pelo usuário. No entanto, há um erro na leitura da nota. Analise o trecho de código e marque a opção que identifica corretamente o erro.",
+      "code": "nota = float(input(Digite a nota: ));\n\nif nota >= 6.0:\n    print(\"Parabéns! Você passou.\");\nelse:\n    print(\"Infelizmente, você não atingiu a média mínima.\");",
+      "alternatives": [
+        "Erro na linha else:",
+        "Erro na linha if nota >= 6.0:",
+        "Erro na linha nota = float(input(Digite a nota: ))",
+        "Não há erro no código"
+      ],
+      "answer_alternative": 3,
+      "answer_description": "A função input está sem as “” contendo a mensagem",
+      "difficulty": "Médio",
+      "type":"Sintático"
+    },
+    {
+      "id": 6,
+      "title": "Cadastro de Usuário",
+      "description": "Um sistema de cadastro de usuários está sendo desenvolvido, e o programador está coletando o nome do usuário. No entanto, há um erro na leitura do nome. Analise o trecho de código e marque a opção que identifica corretamente o erro.",
+      "code": "nome = input(Digite seu nome: );\n\nif len(nome) >= 3:\n    print(\"Cadastro realizado com sucesso.\");\nelse:\n    print(\"Nome muito curto. Tente novamente.\");",
+      "alternatives": [
+        "Erro na linha nome = input(Digite seu nome: ).",
+        "Erro na linha if len(nome) >= 3:",
+        "Erro na linha else:",
+        "Não há erro no código."
+      ],
+      "answer_alternative": 1,
+      "answer_description": "A função input está sem as “” contendo a mensagem.",
+      "difficulty": "Médio",
+      "type":"Sintático"
+    },
+    {
+      "id": 7,
+      "title": "Exibição de Resultado",
+      "description": "Um programador está desenvolvendo um código para verificar se um número é positivo ou negativo. No entanto, há um erro na exibição da mensagem. Analise o trecho de código e marque a opção que identifica corretamente o erro.",
+      "code": "numero = int(input(\"Digite um número: \"));\n\nif numero >= 0:\n    print(Número positivo.);\nelse:\n    print(\"Número negativo.\");",
+      "alternatives": [
+        "Erro na linha if numero >= 0:",
+        "Erro na linha else:",
+        "Erro na linha print(Número positivo.)",
+        "Não há erro no código"
+      ],
+      "answer_alternative": 3,
+      "answer_description": "A função print na linha 4 não contém as “” necessárias.",
+      "difficulty": "Médio",
+      "type":"Sintático"
+    },
+    {
+      "id": 8,
+      "title": "Feedback de Usuário",
+      "description": "Um grande site está criando um programa para receber feedback do usuário. No entanto, há um erro na exibição da mensagem. Analise o trecho de código e marque a opção que identifica corretamente o erro.",
+      "code": "feedback = input(\"Deixe seu feedback: \");\n\nif feedback.lower() == \"positivo\":\n    print(\"Muito obrigado pelo feedback positivo.\");\nelse:\n    print(Obrigado pelo feedback.);",
+      "alternatives": [
+        "Erro na linha if feedback.lower() == \"positivo\":",
+        "Erro na linha else:",
+        "Erro na linha print(Obrigado pelo feedback.)",
+        "Não há erro no código"
+      ],
+      "answer_alternative": 3,
+      "answer_description": "A função print na linha 6 não contém as “” necessárias.",
+      "difficulty": "Médio",
+      "type":"Sintático"
+    },
+    {
+      "id": 9,
+      "title": "Cálculo de Área",
+      "description": "Um programador está tentando calcular a área de um retângulo, mas há um erro envolvendo variáveis. Analise o trecho de código e marque a opção que identifica corretamente o erro.",
+      "code": "comprimento = float(input(\"Digite o comprimento do retângulo: \"));\nlargura = float(input(\"Digite a largura do retângulo: \"));\n\narea = tamanho * largura;\n\nprint(\"A área do retângulo é:\", area, \"metros quadrados.\");",
+      "alternatives": [
+        "Erro na linha print(\"A área do retângulo é:\", area, \"metros quadrados.\").",
+        "Erro na linha area = tamanho * largura.",
+        "Erro na linha largura = float(input(\"Digite a largura do retângulo: \"))",
+        "Não há erro no código."
+      ],
+      "answer_alternative": 2,
+      "answer_description": "Na linha 4 estamos usando a variável não criada chamada tamanho.",
+      "difficulty": "Médio",
+      "type":"Semântico"
+    },
+    {
+      "id": 10,
+      "title": "Verificação de Números Pares",
+      "description": "Um desenvolvedor está tentando criar um programa para verificar se um número é par ou ímpar. No entanto, há um erro na lógica envolvendo variáveis. Analise o trecho de código e marque a opção que identifica corretamente o erro.",
+      "code": "numero = int(input(\"Digite um número: \"));\n\nif numeros % 2 == 0:\n    print(\"O número é par.\");\nelse:\n    print(\"O número é ímpar.\");",
+      "alternatives": [
+        "Erro na linha idade_usuario = int(input(\"Digite sua idade: \"))",
+        "Erro na linha if numeros % 2 = 0",
+        "Erro na linha else:",
+        "Não há erro no código"
+      ],
+      "answer_alternative": 2,
+      "answer_description": "Variável não criada sendo usada na linha 3.",
+      "difficulty": "Difícil",
+      "type":"Semântico"
+    },
+    {
+      "id": 11,
+      "title": "Verificação de Números Positivos/Negativos",
+      "description": "Um programador está criando um código para verificar se um número é positivo ou negativo. No entanto, há um erro na estrutura do if e else. Analise o trecho de código e marque a opção que identifica corretamente o erro.",
+      "code": "numero = float(input(\"Digite um número: \"));\n\nif numero >= 0\n    print(\"O número é positivo.\");\nelse:\n    print(\"O número é negativo.\");",
+      "alternatives": [
+        "Erro na linha else",
+        "Erro na linha print(\"O número é positivo.\")",
+        "Erro na linha if numero >= 0",
+        "Não há erro no código"
+      ],
+      "answer_alternative": 3,
+      "answer_description": "Falta do : no final do comando if.",
+      "difficulty": "Médio",
+      "type":"Sintático"
+    },
+    {
+      "id": 12,
+      "title": "Verificação de Números Pares/Ímpares",
+      "description": "Se desafiando na programação, você está tentando criar um programa para verificar se um número é par ou ímpar. No entanto, há um erro na estrutura do if e else. Analise o trecho de código e marque a opção que identifica corretamente o erro.",
+      "code": "numero = int(input(\"Digite um número: \"));\n\nif numero % 2 == 0:\n    print(\"O número é par.\");\nelse\n    print(\"O número é ímpar.\");",
+      "alternatives": [
+        "Erro na linha if numero % 2 == 0",
+        "Erro na linha print(\"O número é par.\")",
+        "Erro na linha else",
+        "Não há erro no código"
+      ],
+      "answer_alternative": 3,
+      "answer_description": "Falta do : no final do comando else.",
+      "difficulty": "Médio",
+      "type":"Sintático"
+    },
+    {
+      "id": 13,
+      "title": "Exibição de Mensagem",
+      "description": "Você está tentando imprimir uma mensagem simples, mas há um erro na passagem de parâmetro para o print. Analise o trecho de código e marque a opção que identifica corretamente o erro.",
+      "code": "mensagem = \"Olá, mundo!\";\n\nprint(mensagem, \"Python é incrível\", #&*%$)",
+      "alternatives": [
+        "Erro na linha mensagem = \"Olá, mundo!\".",
+        "Erro na linha print(mensagem, \"Python é incrível.\", #&*¨%$).",
+        "Erro na linha print.",
+        "Não há erro no código."
+      ],
+      "answer_alternative": 2,
+      "answer_description": "Os parâmetros do print estão totalmente sem sentido.",
+      "difficulty": "Fácil",
+      "type":"Léxico"
+    },
+    {
+      "id": 14,
+      "title": "Cálculo de Desconto",
+      "description": "Está sendo criado para um supermercado um código para calcular o desconto em um produto com base em uma porcentagem. No entanto, há um erro na aplicação do operador aritmético. Analise o trecho de código e marque a opção que identifica corretamente o erro.",
+      "code": "preco = float(input(\"Digite o preço do produto: \"));\ndesconto_percentual = input(\"Digite a porcentagem de desconto: \");\n\nvalor_desconto = preco * desconto_percentual § 100;\npreco_final = preco - valor_desconto;\n\nprint(\"O preço final com desconto é:\", preco_final)",
+      "alternatives": [
+        "Erro na linha preco = float(input(\"Digite o preço do produto: \")).",
+        "Erro na linha valor_desconto = preco * desconto_percentual § 100.",
+        "Erro na linha preco_final = preco - valor_desconto.",
+        "Não há erro no código."
+      ],
+      "answer_alternative": 2,
+      "answer_description": "Para o contexto da questão, o operador escolhido acabou sendo inadequado. O caracter § não existe na linguagem python.",
+      "difficulty": "Difícil",
+      "type":"Léxico"
+    },
+    {
+      "id": 15,
+      "title": "Nome de Variável Inválido",
+      "description": "Uma aluna de matemática está desenvolvendo um código para calcular a área de um círculo. No entanto, ela está cometendo um erro ao escolher o nome da variável. Analise o trecho de código e marque a opção que identifica corretamente o problema.",
+      "code": "import math;\n\ndef = float(input(\"Digite o raio do círculo: \"));\npi = 3.14159;\n\narea = math.pi * raio**2;\n\nprint(\"A área do círculo é:\", area)",
+      "alternatives": [
+        "Erro na linha raio = float(input(\"Digite o raio do círculo: \")).",
+        "Erro na linha area = math.pi * raio**2.",
+        "Erro na linha def = float(input(\"Digite o raio do círculo: \"))",
+        "Não há erro no código."
+      ],
+      "answer_alternative": 3,
+      "answer_description": "Aqui está sendo usado uma variável categorizada como palavra reservada da linguagem python como um float, ação não aceitável.",
+      "difficulty": "Médio",
+      "type":"Sintático"
+    },
+    {
+      "id": 16,
+      "title": "Conversão de Tipo Incorreta",
+      "description": "Um grupo de estudantes está criando um código para calcular a média de idade de um grupo de pessoas. No entanto, há um erro na conversão de tipo. Analise o trecho de código e marque a opção que identifica corretamente o problema.",
+      "code": "idade1 = input(\"Digite a idade da primeira pessoa: \");\nidade2 = input(\"Digite a idade da segunda pessoa: \");\nidade3 = input(\"Digite a idade da terceira pessoa: \");\n\nmedia_idade = (idade1 + idade2 + idade3) / 3;\n\nprint(\"A média de idade é:\", media_idade)",
+      "alternatives": [
+        "Erro na linha idade1 = input(\"Digite a idade da primeira pessoa: \").",
+        "Erro na linha idade3 = input(\"Digite a idade da terceira pessoa: \").",
+        "Erro na linha media_idade = (idade1 + idade2 + idade3) / 3.",
+        "Não há erro no código."
+      ],
+      "answer_alternative": 3,
+      "answer_description": "Desta forma, quando é efetuada a leitura dos valores estão sendo lidos string, porem quando vai se fazer a operação, está sendo feita uma operação numérica entre strings, que não é permitido.",
+      "difficulty": "Médio",
+      "type":"Semântico"
+    },
+    {
+      "id": 17,
+      "title": "Exibição de Informações",
+      "description": "Um programador está tentando imprimir uma mensagem contendo o nome e a idade de uma pessoa, mas há um erro na passagem de parâmetros para o print. Analise o trecho de código e marque a opção que identifica corretamente o problema.",
+      "code": "nome = \"Alice\";\nidade = 25;\n\nprint(\"Nome:\", nome \"Idade:\", idade)",
+      "alternatives": [
+        "Erro na linha nome = \"Alice\".",
+        "Erro na linha idade = 25.",
+        "Erro na linha print(\"Nome:\", nome \"Idade:\", idade).",
+        "Não há erro no código."
+      ],
+      "answer_alternative": 3,
+      "answer_description": "Há a falta de uma virgula dentro dos parênteses do print.",
+      "difficulty": "Difícil",
+      "type":"Sintático"
+    },
+    {
+      "id": 18,
+      "title": "Contador de vogais",
+      "description": "Um estudante está desenvolvendo um código que conta o número de vogais em uma frase e exibe na tela, no entanto há um erro justamente com a variável de contagem de vogais. Analise o código e encontre o erro.",
+      "code": "def contar_vogais(string):\n    vogais = 'aeiouAEIOU'\n    contador = 0\n    for char in string:\n        if char in vogais:\n            contador + 1\n    return contador\n\nfrase = input(\"Digite uma frase \")\nprint(\"Número de vogais na frase:\", contar_vogais(frase))",
+      "alternatives": [
+        "Erro na linha  if char in vogais:.",
+        "Erro na linha for char in string:.",
+        "Erro na linha  def contar_vogais(string):",
+        "Erro na linha contador + 1."
+      ],
+      "answer_alternative": 4,
+      "answer_description": "Resposta correta letra d). Uso incorreto do incrementador. \n Para incrementar uma variavel é utilizados os caracteres “+=” ou “contador = contador +1”.",
+      "difficulty": "Difícil",
+      "type":"Sintático"
+    },
+    {
+      "id": 0,
+      "title": "Erro na Folha de Pagamento",
+      "description": "Uma empresa está desenvolvendo um programa para calcular a folha de pagamento dos funcionários. No entanto, um erro inesperado apareceu no código. Você pode identificar e corrigir o problema?",
+      "code": "def calcular_salario(total_horas_trabalhadas, valor_hora):\n    salario = total_horas_trabalhadas * valor_hora\n    desconto_inss = salario * 0.11\n    salario_liquido = salario - desconto_inss - desconto_irrf\n    return salario_liquido",
+      "alternatives": [
+        "O código está correto, não há erros.",
+        "Erro na linha 'desconto_irrf = salario * 0.11', a variável 'desconto_irrf' não foi criada.",
+        "Erro na linha 'return salario_liquido', a instrução de retorno está incorreta.",
+        "Erro na linha 'def calcular_salario(total_horas_trabalhadas, valor_hora):', a declaração da função está incorreta."
+      ],
+      "answer_alternative": 2,
+      "answer_description": "O erro semântico ocorre na linha 'desconto_irrf = salario * 0.11', onde a variável 'desconto_irrf' não foi criada previamente.",
+      "difficulty": "Médio",
+      "type": "Semântico"
+    }
+    ,
+    {
+      "id": 20,
+      "title": "Erro na Venda de Flores",
+      "description": "Uma floricultura está desenvolvendo um programa para calcular o preço das vendas de flores. No entanto, um erro inesperado apareceu no código. Você pode identificar e corrigir o problema?",
+      "code": "def calcular_valor_venda(quantidade_flores, preco_unitario):\n    total_venda = quantidade_flores * preco_unitario\n    desconto = total_venda * 0.1\n    valor_final = total_venda - desconto - custo_entrega\n    return valor_final",
+      "alternatives": [
+        "O código está correto, não há erros.",
+        "Erro na linha 'valor_final = total_venda - desconto - custo_entrega', a variável 'custo_entrega' não foi criada.",
+        "Erro na linha 'desconto = total_venda * 0.1', a fórmula de cálculo do desconto está incorreta.",
+        "Erro na linha 'def calcular_valor_venda(quantidade_flores, preco_unitario):', a declaração da função está incorreta."
+      ],
+      "answer_alternative": 2,
+      "answer_description": "O erro ocorre na linha 'valor_final = total_venda - desconto - custo_entrega', onde a variável 'custo_entrega' não foi criada previamente.",
+      "difficulty": "Médio",
+      "type": "Semântico"
+    }
+    ,
+    {
+      "id": 21,
+      "title": "Calcular o fatorial de um número",
+      "description": "O código a seguir foi desenvolvido com o intuito de calcular o valor do fatorial de um número. Porém está apresentando erro de tipagem. Analise o código e encontre o erro.",
+      "code": "num = input(\"Digite um número: \");\n if num>=0: \n    fatorial = 1 \n    for i in range(1, num + 1): \n        fatorial *= i \n    print(\"O fatorial de\", num, \"é\", fatorial) \nelse: \n    print(\"Entrada inválida!\")",
+      "alternatives": [
+        "Erro na linha fatorial *= i",
+        "Erro na linha if num>=0:",
+        "Erro na linha fatorial = 1",
+        "Erro na linha num = input(“Digite um número: ”)"
+      ],
+      "answer_alternative": 2,
+      "answer_description": "Para fazer operações com números é necessário que a entrada seja do tipo int ou float para isso é necessário fazer a conversão do tipo de dado, desta maneira “num = int(input(“...”))”.",
+      "difficulty": "Fácil",
+      "type":"Semântico"
+    },
+    {
+      "id": 0,
+      "title": "Análise de Dados Climáticos",
+      "description": "Um cientista está desenvolvendo um programa para analisar dados climáticos e prever o tempo. No entanto, um erro inesperado apareceu no código. Você pode identificar e corrigir o problema?",
+      "code": "def prever_temperatura(temperatura, temperatura):\n    diferenca_temperatura = temperatura - temperatura\n    if diferenca_temperatura > 0:\n        return 'A temperatura está subindo.'\n    elif diferenca_temperatura < 0:\n        return 'A temperatura está caindo.'\n    else:\n        return 'A temperatura permanece estável.'",
+      "alternatives": [
+        "O código está correto, não há erros.",
+        "Erro na linha 'def prever_temperatura(temperatura, temperatura):', os parâmetros da função possuem o mesmo nome.",
+        "Erro na linha 'diferenca_temperatura = temperatura - temperatura', a operação entre as variáveis 'temperatura' e 'temperatura' é redundante.",
+        "Erro na linha 'return 'A temperatura está subindo.'', a string de retorno está incorreta."
+      ],
+      "answer_alternative": 2,
+      "answer_description": "O erro ocorre na linha 'def prever_temperatura(temperatura, temperatura):', onde os parâmetros da função possuem o mesmo nome, o que causa uma ambiguidade.",
+      "difficulty": "Difícil",
+      "type": "Semântico"
+    }
+    ,
+    {
+      "id": 23,
+      "title": "Erro na Calculadora Simples",
+      "description": "Uma calculadora simples está sendo desenvolvida para realizar operações básicas. No entanto, um erro semântico inesperado apareceu no código. Você pode identificar e corrigir o problema?",
+      "code": "def multiplicar():\n    resultado = 16 * \"9\"\n    return resultado",
+      "alternatives": [
+        "O código está correto, não há erros.",
+        "Erro na linha 'resultado = 16 * \"9\"', é um erro multiplicar um inteiro por uma string.",
+        "Erro na linha 'return resultado', a instrução de retorno está faltando.",
+        "Erro na linha 'def multiplicar():', a declaração da função está incorreta."
+      ],
+      "answer_alternative": 2,
+      "answer_description": "O erro semântico ocorre na linha 'resultado = 16 * \"9\"', onde é um erro multiplicar um inteiro por uma string.",
+      "difficulty": "Fácil",
+      "type": "Semântico"
+    }
+    ,
+    {
+      "id": 0,
+      "title": "Avaliação de Desempenho de Jogadores de Futebol",
+      "description": "Um treinador de futebol está desenvolvendo um programa para avaliar o desempenho dos jogadores em um campeonato. No entanto, um erro inesperado apareceu no código. Você pode identificar e corrigir o problema?",
+      "code": "def avaliar_desempenho(jogador, jogador):\n    diferenca_desempenho = jogador - jogador\n    if diferenca_desempenho > 0:\n        return 'O desempenho do jogador está melhorando.'\n    elif diferenca_desempenho < 0:\n        return 'O desempenho do jogador está piorando.'\n    else:\n        return 'O desempenho do jogador permanece o mesmo.'",
+      "alternatives": [
+        "O código está correto, não há erros.",
+        "Erro na linha 'def avaliar_desempenho(jogador, jogador):', os parâmetros da função possuem o mesmo nome.",
+        "Erro na linha 'diferenca_desempenho = jogador - jogador', a operação entre as variáveis 'jogador' e 'jogador' é redundante.",
+        "Erro na linha 'return 'O desempenho do jogador está melhorando.'', a string de retorno está incorreta."
+      ],
+      "answer_alternative": 2,
+      "answer_description": "O erroocorre na linha 'def avaliar_desempenho(jogador, jogador):', onde os parâmetros da função possuem o mesmo nome, o que causa uma ambiguidade.",
+      "difficulty": "Difícil",
+      "type": "Semântico"
+    }
+    ,
+    {
+      "id": 25,
+      "title": "Dobrar valores de uma lista.",
+      "description": "O código apresentado foi criado para armazenar números em uma lista e em seguida dobrar todos os valores dos números da lista. No entanto, algo deu errado e os resultados não foram o esperado. Analise o código e encontre o erro.",
+      "code": "def dobrar_lista(lista): \n nova_lista = [] \n for elemento in lista: \n    novo_elemento = elemento * 2 \n    nova_lista.append(novo_elemento) \n return nova_lista \n\nlista = list() \ni = 1 \nwhile i <= 10: \n   elem = int(input(\"Digite um elemento da lista:\")) \n   lista.append(elem) \n\nprint(lista) \nnova_lista = dobrar_lista(lista) \nprint(nova_lista)",
+      "alternatives": [
+        "Erro: Loop infinito que não deveria existir.",
+        "Erro na linha novo_elemento = elemento * 2",
+        "Erro na linha lista.append(elem)",
+        "Erro na linha nova_lista.append(novo_elemento)"
+      ],
+      "answer_alternative": 1,
+      "answer_description": "Resposta correta letra a). Erro de lógica.\nDentro do while a variável “i” deveria ser incrementada com o valor 1 para que o código dentro do while seja executado apenas 10 vezes e não infinitamente.",
+      "difficulty": "Médio",
+      "type":"Semântico"
+    },
+    {
+      "id": 26,
+      "title": "Imprimir maior e menor número de uma lista;",
+      "description": "Um programador desenvolveu um código que imprime o maior e o menor número de uma lista. No entanto, ele identificou um erro em seu código. Analise o código e encontre o erro.",
+      "code": "def maior_menor(lista): \n maior = lista[0] \n menor = lista[0] \n\n for elemento in lista: \n   if elemento > maior: \n      maior = elemento \n   elif elemento < menor: \n      menor = elemento \n return maior, menor \n\nlista = list() \ni = 1 \nwhile i <= 10: \n elem = int(input(\"Digite um elemento da lista:\")) \n lista.append(elem) \n i += 1 \nprint(lista) \n\nmaior, menor = maior_menor(lista) \nprint(\"Maior:\", maior) \nprint(\"Menor:\", menor)",
+      "alternatives": [
+        "Erro na linha maior,menor = maior_menor(lista)",
+        "Erro na linha lista.append(elem)",
+        "Erro na linha if elemento> maior:",
+        "Erro na linha elif elemento < menor:"
+      ],
+      "answer_alternative": 4,
+      "answer_description": "Resposta correta letra d). Uso de variável inexistente.\nPara comparar um valor com uma variável essa variável deve ser declarada antes, assim como foi feito com a variável “maior”, a variável “menor” também deveria ter sido declarada antes.",
+      "difficulty": "Difícil",
+      "type":"Semântico"
+    },
+    {
+      "id": 27,
+      "title": "Erro de Sintaxe",
+      "description": "Identifique o erro de sintaxe no seguinte trecho de código Python:",
+      "code": "x = 10\ny = 20\nif x > y\n    print(\"x é maior que y\")\nelse:\n    print(\"y é maior que x\")",
+      "alternatives": [
+        "Falta de dois pontos (:) na linha do if.",
+        "Uso incorreto do operador de comparação (>) na linha do if.",
+        "Falta de indentação na linha do print dentro do if.",
+        "Falta de indentação na linha do else."
+      ],
+      "answer_alternative": 1,
+      "answer_description": "O erro léxico ocorre na falta dos dois pontos (:) após a condição do if, o que resulta em uma sintaxe inválida.",
+      "difficulty": "Fácil",
+      "type": "Sintático"
+    },
+    {
+      "id": 28,
+      "title": "Uma Soma Incomum",
+      "description": "Identifique o erro no seguinte trecho de código Python:",
+      "code": "resultado = 10 + & 5",
+      "alternatives": [
+        "Uso incorreto do operador &.",
+        "Falta de aspas em torno dos números.",
+        "Falta de um operador matemático válido.",
+        "Uso incorreto de espaços em branco."
+      ],
+      "answer_alternative": 1,
+      "answer_description": "O erro léxico ocorre devido ao uso incorreto do operador '&', que não é um operador válido em Python.",
+      "difficulty": "Fácil",
+      "type": "Sintático"
+    },
+    {
+      "id": 29,
+      "title": "Erro de Palavra-chave",
+      "description": "Identifique o erro de palavra-chave no seguinte trecho de código Python:",
+      "code": "se 10 > 5:\n    print(\"Dez é maior que cinco\")\nelse:\n    print(\"Dez não é maior que cinco\")",
+      "alternatives": [
+        "Uso da palavra-chave se está incorreto.",
+        "Uso da palavra-chave else está incorreto.",
+        "Falta de indentação na linha do print dentro do if.",
+        "Uso incorreto do operador de comparação (>) na linha do if."
+      ],
+      "answer_alternative": 1,
+      "answer_description": "O erro léxico ocorre devido ao uso incorreto da palavra-chave 'se' em vez de 'if'.",
+      "difficulty": "Fácil",
+      "type": "Léxico"
+    },
+    {
+      "id": 30,
+      "title": "Erro de Símbolos Inválidos",
+      "description": "Identifique o erro de símbolos inválidos no seguinte trecho de código Python:",
+      "code": "x = 10\ny = 20\nz = x * y\n!z = 200",
+      "alternatives": [
+        "Uso incorreto do operador de atribuição (!) na linha z = x * y.",
+        "Variável não pode começar com um ponto de exclamação.",
+        "Falta de indentação na linha do cálculo de z.",
+        "Uso incorreto do operador de atribuição (=) na linha z = x * y."
+      ],
+      "answer_alternative": 2,
+      "answer_description": "O erro léxico ocorre porque variáveis em Python não podem começar com um ponto de exclamação (!).",
+      "difficulty": "Médio",
+      "type": "Léxico"
+    },
+    {
+      "id": 32,
+      "title": "Erro de Estruturação",
+      "description": "Identifique o erro de estruturação no seguinte trecho de código Python:",
+      "code": "if (x < 10)\n    print(\"x é menor que 10\")\nelse:\n    print(\"x é maior ou igual a 10\")",
+      "alternatives": [
+        "Falta de dois pontos (:) na linha do if.",
+        "Falta de parênteses na condição do if.",
+        "Uso incorreto do operador de comparação (<) na linha do if.",
+        "Falta de indentação na linha do print dentro do if."
+      ],
+      "answer_alternative": 1,
+      "answer_description": "O erro sintático ocorre devido à falta dos dois pontos (:) após a condição do if, o que resulta em uma estruturação inválida.",
+      "difficulty": "Fácil",
+      "type": "Sintático"
+    },
+    {
+      "id": 33,
+      "title": "Erro de Expressão",
+      "description": "Identifique o erro de expressão no seguinte trecho de código Python:",
+      "code": "x = 10\ny = 20.2.2\nz = x ** y",
+      "alternatives": [
+        "Uso incorreto da atribuição do número decimal a variavel y.",
+        "Variável não pode começar com um asterisco (*).",
+        "Uso incorreto do operador de atribuição (=) na linha z = x ** y.",
+        "Falta de parênteses na expressão x ** y."
+      ],
+      "answer_alternative": 1,
+      "answer_description": "O erro léxico ocorre pelo uso incorreto da atribuição do decimal a variavel y.",
+      "difficulty": "Médio",
+      "type": "Léxico"
+    },
+    {
+      "id": 34,
+      "title": "Calculando Preços no Mercado",
+      "description": "Uma loja de supermercado está desenvolvendo um programa para calcular os preços dos produtos com desconto. No entanto, um erro enigmático apareceu no código. Você pode encontrá-lo e corrigi-lo?",
+      "code": "def calcular_preco_com_desconto(preco, desconto):\n    preco_com_desconto = preco - (preco * desconto)\n    pre#co_final = preco_com_desconto\n    return preco_final",
+      "alternatives": [
+        "Erro na linha 'preco_com_desconto = preco - (preco * desconto)', a fórmula de cálculo do preço com desconto está incorreta.",
+        "Erro na linha 'pre#co_final = preco_com_desconto', o símbolo '#' não é permitido em nomes de variáveis.",
+        "Erro na linha 'pre#co_final = preco_com_desconto', está faltando um operador de atribuição antes de 'pre#co_final'.",
+        "Erro na linha 'return preco_final', o operador de retorno de função não pode ser usado desta forma."
+      ],
+      "answer_alternative": 1,
+      "answer_description": "O erro léxico ocorre na declaração da variável 'pre#co_final', onde o símbolo '#' não é permitido em nomes de variáveis em Python.",
+      "difficulty": "Difícil",
+      "type": "Léxico"
+    }
+    ,
+    {
+      "id": 35,
+      "title": "Erro de Identação",
+      "description": "Identifique o erro de identação no seguinte trecho de código Python:",
+      "code": "def calcular_media(lista):\n    soma = 0\n    for num in lista:\nsoma = soma + num \nresultado = soma/len()lista  \n    return resultado",
+      "alternatives": [
+        "Falta de dois pontos (:) após o cabeçalho da função.",
+        "Erro na identação da linha do cálculo da média.",
+        "Falta de (:) após o comando for.",
+        "Erro na declaração da variável soma."
+      ],
+      "answer_alternative": 2,
+      "answer_description": "O erro sintático ocorre devido à identação incorreta na linha do cálculo da média.",
+      "difficulty": "Médio",
+      "type": "Sintático"
+    },
+    {
+      "id": 36,
+      "title": "Erro Léxico ?",
+      "description": "Identifique o erro de sintaxe no seguinte trecho de código Python:",
+      "code": "def validar_email(email):\n    if '@' in email and '.' in email:\n        return True\n    mais:\n        return False",
+      "alternatives": [
+        "Falta de dois pontos (:) após a condição do if.",
+        "Uso incorreto do operador de comparação (in) na linha do if.",
+        "Uso incorreto da palavra-chave mais em vez de else.",
+        "Falta de indentação na linha do return False."
+      ],
+      "answer_alternative": 3,
+      "answer_description": "O erro léxico ocorre devido ao uso da palavra-chave 'mais' em vez de 'else' para definir o bloco de código do else.",
+      "difficulty": "Médio",
+      "type": "Léxico"
+    },
+    {
+      "id": 37,
+      "title": "Calculando Descontos em Perfumes",
+      "description": "Uma loja de perfumes está desenvolvendo um programa para calcular os descontos nos produtos. No entanto, um erro misterioso apareceu no código. Você consegue identificar e corrigir o problema?",
+      "code": "def calcular_desconto(preco):\n    desconto_decimal = 2.a6\n    preco_com_desconto = preco * (1 - desconto_decimal)\n    return preco_com_desconto",
+      "alternatives": [
+        "Erro na linha 'preco_com_desconto = preco * (1 - desconto_decimal)', a fórmula de cálculo do preço com desconto está incorreta.",
+        "Erro na linha 'retornar preco_com_desconto', o valor a ser retornado está incorreto.",
+        "Erro na linha 'desconto_decimal = 2.a6', um decimal não pode conter letras.",
+        "Erro na linha 'def calcular_desconto(preco, desconto)', a declaração da função está incorreta."
+      ],
+      "answer_alternative": 3,
+      "answer_description": "O erro léxico ocorre na linha 'desconto_decimal = 2.a6', onde um decimal não pode conter letras em Python.",
+      "difficulty": "Difícil",
+      "type": "Léxico"
+    }
+    ,
+    {
+      "id": 38,
+      "title": "Uma atribuição incorreta.",
+      "description": "Identifique o erro de atribuição no seguinte trecho de código Python:",
+      "code": "x = 10\ny = 20\nx = 5\ny § x",
+      "alternatives": [
+        "Uso incorreto do operador de atribuição (§) na linha y § x.",
+        "Variável não pode começar com um número.",
+        "Uso incorreto do operador de igualdade (=) na linha y = x.",
+        "Falta de parênteses na expressão x = 5."
+      ],
+      "answer_alternative": 1,
+      "answer_description": "O erro léxico ocorre devido ao uso incorreto do operador de atribuição na última. O simbolo § não corresponde a nada na linguagem python.",
+      "difficulty": "Médio",
+      "type": "Léxico"
+    },
+    {
+      "id": 39,
+      "title": "Problema na Casa de Materiais de Construção",
+      "description": "Uma loja de materiais de construção está desenvolvendo um programa para gerenciar seus produtos. No entanto, um erro misterioso apareceu no código. Você pode identificar e corrigir o problema?",
+      "code": "def definir_material(material):\n    descricao = 'Ferramentas de construção\n    return descricao",
+      "alternatives": [
+        "Erro na linha 'definir_material(material):', a definição da função está incorreta.",
+        "Erro na linha 'descricao = 'Ferramentas de construção', as aspas finais estão faltando.",
+        "Erro na linha 'descricao = 'Ferramentas de construção', a string não pode conter quebras de linha dessa forma.",
+        "Erro na linha 'return descricao', o valor a ser retornado está incorreto."
+      ],
+      "answer_alternative": 2,
+      "answer_description": "O erro léxico ocorre na linha 'descricao = 'Ferramentas de construção', onde as aspas finais estão faltando, resultando em uma string malformada.",
+      "difficulty": "Difícil",
+      "type": "Léxico"
+    }
+    ,
+    {
+      "id": 40,
+      "title": "Misturando Línguas",
+      "description": "Identifique o erro no seguinte trecho de código Python:",
+      "code": "def verificar_primo(numero):\n    if numero <= 1:\n        retornar False\n    para i em range(2, numero):\n        se numero % i == 0:\n            retornar False\n    retornar True",
+      "alternatives": [
+        "Falta de indentação na linha do retorno False dentro do primeiro if.",
+        "Erro na declaração da função, deveria ser 'def verificar_primo(numero):'.",
+        "Uso incorreto da palavra-chave para, deveria ser 'for' em vez de 'para'.",
+        "Erro na verificação da condição do primeiro if, deveria ser 'if numero <= 1:'."
+      ],
+      "answer_alternative": 3,
+      "answer_description": "O erro léxico ocorre devido ao uso incorreto da palavra-chave 'para' em vez de 'for' para definir o loop.",
+      "difficulty": "Fácil",
+      "type": "Léxico"
+    },
+    {
+      "id": 0,
+      "title": "Literal Inteiro Invalido ?",
+      "description": "Identifique o erro no seguinte trecho de código Python, que calcula a soma de um número com algo inapropriado:",
+      "code": "resultado = num + 90o*",
+      "alternatives": [
+        "Uso incorreto do operador de multiplicação (*) na expressão.",
+        "Falta de parênteses na expressão para agrupar os operandos.",
+        "O segundo elemento dessa operação é completamente inválido em python.",
+        "Falta de operando após o asterisco (*) na expressão."
+      ],
+      "answer_alternative": 3,
+      "answer_description": "O erro léxico ocorre porque o sufixo 'o' após o número é inválido em Python.",
+      "difficulty": "Fácil",
+      "type": "Léxico"
+    },
+    {
+      "id": 0,
+      "title": "Abrindo e Fechando Instruções",
+      "description": "Identifique o erro léxico no seguinte trecho de código Python:",
+      "code": "def calcular_media(valores):\n    total = sum(valores)\n    quantidade = len(valores)\n    \"\"\"\"\"\" Calculando a média dos valores\n    media = total / quantidade\n    retornar media",
+      "alternatives": [
+        "Erro na declaração da função, deveria ser 'def calcular_media(valores):'.",
+        "Erro na linha 'total = sum(valores)'.",
+        "Erro na linha 'quantidade = len(valores)'.",
+        "Erro na linha do comentário que não foi fechado corretamente."
+      ],
+      "answer_alternative": 4,
+      "answer_description": "O erro léxico ocorre devido ao comentário que é aberto mas não é fechado corretamente, deixando o restante do código como comentário também.",
+      "difficulty": "Médio",
+      "type": "Léxico"
+    },
+    {
+      "id": 0,
+      "title": "Muitos Comentários",
+      "description": "Identifique o erro léxico no seguinte trecho de código Python:",
+      "code": "def calcular_media(valores):\n    total = sum(valores)\n    quantidade = len(valores)\n    \"\"\"\n    Realizando cálculo da média\n    media = total / quantidade\n    retornar media",
+      "alternatives": [
+        "Erro na declaração da função, deveria ser 'def calcular_media(valores):'.",
+        "Erro na linha 'total = sum(valores)'.",
+        "Erro na linha 'quantidade = len(valores)'.",
+        "Erro na linha do comentário que não foi fechado corretamente."
+      ],
+      "answer_alternative": 4,
+      "answer_description": "O erro léxico ocorre devido ao comentário que é aberto mas não é fechado corretamente, deixando o restante do código como comentário também.",
+      "difficulty": "Fácil",
+      "type": "Léxico"
+    },
+    {
+      "id": 0,
+      "title": "Aventura na Escola dos Códigos",
+      "description": "Uma escola está fazendo um projeto para calcular a média das notas dos alunos. No entanto, um erro misterioso se infiltrou no código. Ajude a encontrar e corrigir esse erro!",
+      "code": "def calcular_media(notas):\n    total = sum(notas)\n    @media = total / len(notas)\n    return media",
+      "alternatives": [
+        "Erro na declaração da variável '@media', o símbolo '@' não é permitido em nomes de variáveis.",
+        "Erro na linha 'total = sum(notas)', a função sum() não está sendo usada corretamente.",
+        "Erro na linha 'retornar @media', o operador '@' não pode ser usado desta forma.",
+        "Erro na linha 'return media', está faltando um operador de atribuição antes de 'media'."
+      ],
+      "answer_alternative": 1,
+      "answer_description": "O erro léxico ocorre devido à declaração incorreta da variável '@media', que contém um símbolo '@' não permitido em nomes de variáveis em Python.",
+      "difficulty": "Difícil",
+      "type": "Léxico"
+    },
+    {
+      "id": 0,
+      "title": "Erro no Sistema na Prefeitura",
+      "description": "Um programa da prefeitura está sendo desenvolvido para calcular impostos municipais. No entanto, um erro de sintaxe misterioso apareceu no código. Você pode identificar e corrigir o problema?",
+      "code": "def calcular_impostosalario):\n    if salario > 5000:\n        imposto = salario * 0.25\n    else:\n        imposto = salario * 0.15\n    retornar imposto",
+      "alternatives": [
+        "Erro na linha 'if salario > 5000:', está faltando um parêntese de fechamento.",
+        "Erro na linha 'imposto = salario * 0.25', a fórmula de cálculo do imposto está incorreta.",
+        "Erro na linha def calcular_impostosalario) , onde há a falta da abertura de parênteses",
+        "Erro na linha 'retornar imposto', o comando 'retornar' está incorreto."
+      ],
+      "answer_alternative": 3,
+      "answer_description": "O erro de sintaxe ocorre por falta da abertura correta de parênteses.",
+      "difficulty": "Difícil",
+      "type": "Sintático"
+    },
+    {
+      "id": 0,
+      "title": "Erro no Cadastro de Clientes do Lava Rápido",
+      "description": "Um sistema de cadastro de clientes para um lava rápido de carros está sendo desenvolvido. No entanto, um erro inesperado apareceu no código. Você pode identificar e corrigir o problema?",
+      "code": "def def cadastrar_cliente():\n    nome = input('Digite o nome do cliente: ')\n    telefone = input('Digite o telefone do cliente: ')\n    endereco = input('Digite o endereço do cliente: ')\n    email = input('Digite o email do cliente: ')\n    if nome and telefone and endereco and email:\n        print('Cliente cadastrado com sucesso!')\n    else:\n        print('Erro ao cadastrar cliente. Por favor, preencha todos os campos.')\n    # Lógica para salvar os dados do cliente no banco de dados\n    return",
+      "alternatives": [
+        "Erro na linha 'def def cadastrar_cliente(nome, telefone):', a declaração 'deF def' está incorreta.",
+        "Erro na linha 'print('Cliente cadastrado com sucesso!')', a mensagem de sucesso não está entre aspas duplas.",
+        "Erro na linha '# Lógica para salvar os dados do cliente no banco de dados', o comentário não está no formato correto.",
+        "Erro na linha 'telefone)', está faltando dois pontos (:) após os parâmetros da função."
+      ],
+      "answer_alternative": 1,
+      "answer_description": "O erro ocorre na linha 'deF def cadastrar_cliente(nome, telefone):', onde a declaração 'deF def' está incorreta; deveria ser apenas 'def'.",
+      "difficulty": "Difícil",
+      "type": "Sintático"
+    },
+    {
+      "id": 0,
+      "title": "Análise de Estoques de Loja de Eletrônicos",
+      "description": "Uma loja de eletrônicos está desenvolvendo um programa para analisar o estoque de produtos. No entanto, um erro inesperado apareceu no código. Você pode identificar e corrigir o problema?",
+      "code": "def calcular_valor_total(produtos):\n    valor_total = 0\n    for produto in produtos:\n        valor_total += produto['preco']\n    valor_desconto = valor_total * 0.1\n    valor_final = valor_total - valor_desconto - custo_frete\n    return valor_final\n\nprodutos = [\n    {'nome': 'Smartphone', 'preco': 1000},\n    {'nome': 'Tablet', 'preco': 500}\n]\n\nprint('Valor total da compra:', calcular_valor_total(produtos))",
+      "alternatives": [
+        "O código está correto, não há erros semânticos.",
+        "Erro na linha 'valor_final = valor_total - valor_desconto - custo_frete', a variável 'custo_frete' não foi definida.",
+        "Erro na linha 'for produto in produtos:', a variável 'produtos' não foi inicializada.",
+        "Erro na linha 'valor_desconto = valor_total * 0.1', a fórmula de cálculo do desconto está incorreta."
+      ],
+      "answer_alternative": 2,
+      "answer_description": "O erro ocorre na linha 'valor_final = valor_total - valor_desconto - custo_frete', onde a variável 'custo_frete' não foi definida previamente.",
+      "difficulty": "Difícil",
+      "type": "Semântico"
+    },
+    {
+      "id": 0,
+      "title": "Conversão de Temperatura",
+      "description": "Um programa de previsão do tempo está sendo desenvolvido e um erro foi encontrado. Você pode identificar e corrigir o problema?",
+      "code": "def converter_temperatura(celsius):\n    fahrenheit = celsius * 9/5 + 32\n    return fahrenheit\n\n# Chamada da função com parâmetros incorretos\ntemperatura_fahrenheit = converter_temperatura(30, True)",
+      "alternatives": [
+        "O código está correto, não há erros semânticos.",
+        "Erro na chamada da função 'converter_temperatura(30, True)', os parâmetros passados estão incorretos.",
+        "Erro na linha 'fahrenheit = celsius * 9/5 + 32', a fórmula de conversão de temperatura está incorreta.",
+        "Erro na declaração da função 'def converter_temperatura(celsius):', a assinatura da função está errada."
+      ],
+      "answer_alternative": 2,
+      "answer_description": "O erro ocorre na chamada da função 'converter_temperatura(30, True)', onde os parâmetros passados estão incorretos.",
+      "difficulty": "Fácil",
+      "type": "Semântico"
+    },
+    {
+      "id": 0,
+      "title": "Contagem de Estoque",
+      "description": "Um programa de controle de estoque está sendo desenvolvido e um problema foi encontrado. Você pode identificar e corrigir o problema?",
+      "code": "def contar_estoque(quantidade, disponivel):\n    total = quantidade * disponivel\n    return total\n\n# Chamada da função com parâmetros incorretos\nestoque_total = contar_estoque(100, True)",
+      "alternatives": [
+        "O código está correto, não há erros.",
+        "Erro na chamada da função 'contar_estoque(100, True)', os parâmetros passados estão incorretos.",
+        "Erro na linha 'total = quantidade * disponivel', a operação entre inteiro e booleano está incorreta.",
+        "Erro na declaração da função 'def contar_estoque(quantidade, disponivel):', a assinatura da função está errada."
+      ],
+      "answer_alternative": 3,
+      "answer_description": "O erro ocorre na linha 'total = quantidade * disponivel', onde a operação entre um número inteiro e um booleano está incorreta.",
+      "difficulty": "Fácil",
+      "type": "Semântico"
+    },
+    {
+      "id": 0,
+      "title": "Conversão de Moedas",
+      "description": "Um sistema de conversão de moedas está sendo desenvolvido e um problema foi encontrado. Você pode identificar e corrigir o problema?",
+      "code": "def converter_moeda(valor, taxa_cambio):\n    valor_convertido = valor * taxa_cambio\n    return valor_convertido\n\n# Chamada da função com parâmetros incorretos\nvalor_convertido = converter_moeda(50, '3.5')",
+      "alternatives": [
+        "O código está correto, não há erros semânticos.",
+        "Erro na chamada da função 'converter_moeda(50, '3.5')', os parâmetros passados estão incorretos.",
+        "Erro na linha 'valor_convertido = valor * taxa_cambio', a operação entre um número e uma string está incorreta.",
+        "Erro na declaração da função 'def converter_moeda(valor, taxa_cambio):', a assinatura da função está errada."
+      ],
+      "answer_alternative": 2,
+      "answer_description": "O erro ocorre na chamada da função 'converter_moeda(50, '3.5')', onde os parâmetros passados estão incorretos.",
+      "difficulty": "Fácil",
+      "type": "Semântico"
+    }
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  ]
+}
